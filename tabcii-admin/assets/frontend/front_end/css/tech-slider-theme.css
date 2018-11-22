@@ -1,0 +1,174 @@
+@charset 'UTF-8';
+/* Slider */
+.mine-loading .mine-list
+{
+    background: #fff url('./ajax-loader.gif') center center no-repeat;
+}
+
+/* Icons */
+@font-face
+{
+    font-family: 'mine';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('./fonts/mine.eot');
+    src: url('./fonts/mine.eot?#iefix') format('embedded-opentype'), url('./fonts/mine.woff') format('woff'), url('./fonts/mine.ttf') format('truetype'), url('./fonts/mine.svg#mine') format('svg');
+}
+/* Arrows */
+.mine-prev,
+.mine-next
+{
+    font-size: 0;
+    line-height: 0;
+
+    position: absolute;
+    top: 50%;
+
+    display: block;
+
+    width: 170px;
+    height:100%;
+    padding: 0;
+    margin-top: -10px\9; /*lte IE 8*/
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    background-color: transparent;
+    
+
+    cursor: pointer;
+    border: none;
+    outline: none;
+    
+}
+.mine-prev:hover,
+.mine-prev:focus,
+.mine-next:hover,
+.mine-next:focus
+{
+    color: transparent;
+    outline: none;
+}
+
+.mine-prev:before,
+.mine-next:before
+{
+    font-family: 'mine';
+    font-size: 20px;
+    line-height: 1;
+
+    opacity: .75;
+    color: white;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.mine-prev
+{
+  z-index: 999;
+    left: 0px;
+	 /*background:url(../img/acc-back-arw.png);background-size:20px;
+	 background-repeat:no-repeat;
+	 background-position: top 50% right 80%;*/
+}
+
+.mine-next
+{
+    right: 0px;
+
+    z-index: 99;
+	/*
+	background:url(../img/acc-front-arw.png);background-size:20px;
+	background-repeat:no-repeat;
+	background-position: top 50% left 80%;*/
+}
+
+/* Dots */
+.mine-slider
+{
+}
+
+.mine-dots
+{
+    position: absolute;
+    bottom: -45px;
+
+    display: block;
+
+    width: 100%;
+    padding: 0;
+
+    list-style: none;
+
+    text-align: center;
+}
+.mine-dots li
+{
+    position: relative;
+
+    display: inline-block;
+
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+
+    cursor: pointer;
+}
+.mine-dots li button
+{
+    font-size: 0;
+    line-height: 0;
+
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+
+    cursor: pointer;
+
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+.mine-dots li button:hover,
+.mine-dots li button:focus
+{
+    outline: none;
+}
+.mine-dots li button:hover:before,
+.mine-dots li button:focus:before
+{
+    opacity: 1;
+}
+.mine-dots li button:before
+{
+    font-family: 'mine';
+    font-size: 6px;
+    line-height: 20px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 20px;
+    height: 20px;
+
+    content: '•';
+    text-align: center;
+
+    opacity: .25;
+    color: black;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.mine-dots li.mine-active button:before
+{
+    opacity: .75;
+    color: black;
+}

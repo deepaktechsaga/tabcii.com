@@ -1,0 +1,9 @@
+div#page-content .panel-body form#employmentAgreement ul li {
+    list-style: none;
+    margin-top: 6px;
+}
+div#page-content .panel-body form ul li {
+    list-style: none;
+    margin-top: 6px;
+}
+div#page-content section.neelmani .box ul li{ list-style: none; margin-bottom: 5px; }
